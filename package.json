@@ -1,0 +1,64 @@
+{
+  "name": "create-node-jet-package",
+  "version": "0.0.0",
+  "description": "starter package for node jet",
+  "bin": "dist/generate.js",
+  "types": "dist/generate.d.ts",
+  "prepublish": "tsc",
+  "scripts": {
+    "uat": "npm run build && node dist/generate myapp",
+    "pr": "npm run build && npm run lint",
+    "clean": "tsc --build --clean",
+    "build": "tsc --build",
+    "watch": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "fix": "eslint --fix --ext .ts .",
+    "eslint": "eslint",
+    "audit": "npx audit-ci --moderate",
+    "test": "npm run pr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-jet/create-node-jet-package.git"
+  },
+  "keywords": [
+    "starter",
+    "node",
+    "jet",
+    "package"
+  ],
+  "author": "Daniel Samson <contact@nodejet.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-jet/create-node-jet-package/issues"
+  },
+  "homepage": "https://nodejet.org",
+  "dependencies": {
+    "extract-zip": "2.0.1",
+    "request": "2.88.2"
+  },
+  "devDependencies": {
+    "@types/chai": "4.3.0",
+    "@types/mocha": "9.1.0",
+    "@types/mock-fs": "4.13.1",
+    "@types/node": "16.11.26",
+    "@types/sinon": "10.0.11",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
+    "audit-ci": "5.1.2",
+    "chai": "4.3.6",
+    "eslint": "8.11.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jsdoc": "38.0.2",
+    "eslint-plugin-mocha": "10.0.3",
+    "eslint-plugin-sonarjs": "0.12.0",
+    "install": "0.13.0",
+    "nyc": "15.1.0",
+    "sinon": "13.0.1",
+    "source-map-support": "0.5.21",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.2"
+  }
+}
