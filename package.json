@@ -1,7 +1,7 @@
 {
-  "name": "create-node-jet-package",
+  "name": "create-jetngin-extension",
   "version": "0.0.0",
-  "description": "starter package for node jet",
+  "description": "starter extension for jetngin",
   "bin": "dist/generate.js",
   "types": "dist/generate.d.ts",
   "prepublish": "tsc",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/node-jet/create-node-jet-package.git"
+    "url": "git+https://github.com/jetngin/create-jetngin-extension.git"
   },
   "keywords": [
     "starter",
@@ -30,7 +30,7 @@
   "author": "Daniel Samson <contact@nodejet.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/node-jet/create-node-jet-package/issues"
+    "url": "https://github.com/jetngin/create-jetngin-extension/issues"
   },
   "homepage": "https://nodejet.org",
   "dependencies": {

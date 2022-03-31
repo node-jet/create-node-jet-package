@@ -21,12 +21,12 @@ const runCommand = (cmd: String) => {
 const projectName = process.argv[2];
 
 if (!projectName) {
-  console.warn('Please specify the project neme, eg `npx create-node-jet mypackage`.');
+  console.warn('Please specify the project neme, eg `npx create-jetngin mypackage`.');
   process.exit(1);
 }
 
 const zipFile = `${projectName}.zip`;
-request('https://github.com/node-jet/package-starter/zipball/master')
+request('https://github.com/jetngin/package-starter/zipball/master')
   .on('error', (err: any) => {
     console.error('Failed to download starter project.');
     console.error(err);
@@ -37,7 +37,7 @@ request('https://github.com/node-jet/package-starter/zipball/master')
       .then(() => {
         const ls = readdirSync(process.cwd());
         ls.forEach((file: string) => {
-          if (file.startsWith('node-jet-package-starter-')) {
+          if (file.startsWith('jetngin-package-starter-')) {
             renameSync(file, projectName);
           }
         });
